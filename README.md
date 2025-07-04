@@ -50,11 +50,12 @@ You only need a modern web browser and a code editor.
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/YOUR_USERNAME/personal-portfolio-website.git](https://github.com/YOUR_USERNAME/personal-portfolio-website.git)
+    git clone https://github.com/sammiazaz/PRODIGY_WD_04.git
     ```
 2.  **Navigate to the project directory:**
     ```bash
-    cd personal-portfolio-website
+    cd PRODIGY_WD_04
+
     ```
 3.  **Open `index.html`:**
     Simply open the `index.html` file in your preferred web browser to view the website locally.
@@ -92,7 +93,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-* Sammi Azaz*
+* Sammi Azaz
 * **LinkedIn:** https://www.linkedin.com/in/sammi-azaz-b07a7028b/
 * **GitHub:** https://github.com/sammiazaz
 * **Email:** sammiazaz2004@gmail.com
