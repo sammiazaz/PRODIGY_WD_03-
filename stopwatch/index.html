@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elegant Web Stopwatch</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="container" role="main" aria-label="Stopwatch Application">
+    <header>
+      <h1>Stopwatch</h1>
+    </header>
+
+    <section class="stopwatch-card" aria-live="polite" aria-atomic="true">
+      <div>
+        <div class="time-display" id="time-display" aria-label="Elapsed time">00:00.000</div>
+        <div class="controls" role="group" aria-label="Stopwatch controls">
+          <button id="start-btn" type="button" aria-controls="time-display">Start</button>
+          <button id="stop-btn" type="button" aria-controls="time-display" disabled>Stop</button>
+          <button id="reset-btn" type="button" aria-controls="time-display" disabled>Reset</button>
+          <button id="lap-btn" type="button" aria-controls="lap-list" disabled>Lap</button>
+        </div>
+        <section class="laps" aria-label="Lap times" aria-live="polite">
+          <h2>Laps</h2>
+          <ul class="lap-list" id="lap-list" aria-live="polite" aria-relevant="additions"></ul>
+        </section>
+      </div>
+      
+    </section>
+
+    
+   
+
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>

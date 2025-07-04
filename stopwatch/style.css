@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+:root {
+  --bg-gradient: linear-gradient(135deg, #e3dfff 0%, #c1c8ff 100%);
+  --card-bg: #ffffff;
+  --primary: #232946;
+  --shadow: 0 8px 32px 0 rgba(44,62,80,0.10);
+  --radius: 1.5rem;
+  --transition: 0.18s cubic-bezier(0.4,0,0.2,1);
+  --btn-purple: #0bcc8c;
+  --btn-purple-hover: #098f62;
+  --btn-red:#fd6188;
+  --btn-red-hover:  #fa1f56;
+  --btn-disabled: #e5e7eb;
+  --btn-disabled-text: #bdbdbd;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: var(--bg-gradient);
+  color: var(--primary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 550px;
+  width: 96%;
+  margin: 3rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+header h1 {
+  font-weight: 600;
+  font-size: 2.2rem;
+  color: var(--primary);
+  letter-spacing: 1px;
+}
+
+.stopwatch-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  
+}
+
+.time-display {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--primary);
+  user-select: none;
+  min-width: 11ch;
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 1.2rem;
+  background: none;
+}
+
+.controls {
+  margin-top: 1.2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+button {
+  font-family: inherit;
+  font-weight: 600;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.65rem 2.2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition), box-shadow var(--transition), transform var(--transition);
+  box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+  outline: none;
+  background: var(--btn-purple);
+  color: #fff;
+}
+
+button#start-btn {
+  background: var(--btn-purple);
+}
+button#start-btn:hover,
+button#start-btn:focus-visible {
+  background: var(--btn-purple-hover);
+}
+
+button#stop-btn {
+  background: var(--btn-red);
+  color: white;
+}
+button#stop-btn:hover,
+button#stop-btn:focus-visible {
+  background: var(--btn-red-hover);
+}
+
+button#reset-btn {
+  background-color: #7b61ff;
+}
+button#reset-btn:hover,
+button#stop-btn:focus-visible {
+  background: #5636f7;
+}
+button#lap-btn {
+  background: #7b61ff ;
+  color: white;
+  cursor: default;
+  box-shadow: none;
+}
+
+button:disabled {
+  background: var(--btn-disabled);
+  color: var(--btn-disabled-text);
+  cursor: default;
+  box-shadow: none;
+}
+
+.laps {
+  margin-top: 1.5rem;
+  width: 100%;
+  max-height: 180px;
+  overflow-y: auto;
+  background: transparent;
+  box-shadow: none;
+  border-radius: var(--radius);
+  padding: 0.7rem 1rem;
+  border: none;
+}
+
+.laps h2 {
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 0.7rem;
+  color: var(--primary);
+  font-size: 1.05rem;
+  user-select: none;
+  letter-spacing: 0.5px;
+}
+
+ul.lap-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.lap-list li {
+  font-variant-numeric: tabular-nums;
+  font-size: 1rem;
+  padding: 0.22rem 0;
+  border-bottom: 1px solid #ececec;
+  color: var(--primary);
+}
+
+ul.lap-list li:last-child {
+  border-bottom: none;
+}
+
+/* Scrollbar styling */
+.laps::-webkit-scrollbar {
+  width: 7px;
+}
+.laps::-webkit-scrollbar-track {
+  background: transparent;
+}
+.laps::-webkit-scrollbar-thumb {
+  background-color: #e5e7eb;
+  border-radius: 10px;
+}
+
+@media (max-width: 480px) {
+  .time-display {
+    font-size: 1.5rem;
+  }
+}

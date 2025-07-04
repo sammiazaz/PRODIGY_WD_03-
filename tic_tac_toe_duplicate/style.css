@@ -1,0 +1,338 @@
+/* Import Roboto font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Color Palette */
+:root {
+    --palette-cream: #FAF7DC;
+    --palette-blue-light: #9ED0EA;
+    --palette-blue-medium: #7BA4C7;
+    --palette-blue-dark: #5B8CB9;
+    --palette-blue-deep: #4B86A1;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* A clean, standard Android font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f9; /* Light neutral background, similar to Android's clean aesthetic */
+    color: #333; /* Dark grey text for readability */
+    overflow-x: hidden; /* Prevent horizontal scroll on small screens */
+}
+
+.container {
+    background-color: #91C8E4; /* Very light purple, subtle hint of color */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center;
+    max-width: 1000px;
+    width: 90%;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #673ab7; /* Deeper purple for main title */
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 1em;
+    color: #0d0101; /* Softer grey for subtitle */
+    margin-bottom: 30px;
+}
+
+.game-area {
+    display: flex;
+    gap: 20px; /* Space between the two main sections */
+    justify-content: center;
+    flex-wrap: wrap; /* Allow sections to wrap onto new lines on smaller screens */
+}
+
+.game-mode-section,
+.game-stats-section {
+    background-color: #FFFBDE; /* Clean white background for game sections */
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1; /* Allows sections to grow and shrink */
+    min-width: 300px; /* Ensures sections don't get too narrow */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05); /* Even subtler shadow for inner cards */
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #4682A9; /* Slightly lighter purple for section titles */
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* Game Mode Options (VS AI / Two Player buttons) */
+.game-mode-options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.mode-button {
+    background-color: #e0e0e0; /* Light grey for inactive buttons */
+    color: #555;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s; /* Smooth transitions for hover/active */
+    flex: 1; /* Make buttons take equal width within their container */
+}
+
+.mode-button:hover {
+    background-color: #d4d4d4; /* Slightly darker on hover */
+}
+
+.mode-button.active {
+    background-color: #673ab7; /* Deeper purple for active "VS AI" */
+    color: #fff;
+    box-shadow: 0 0 8px rgba(103, 58, 183, 0.3); /* Subtle glow for active state */
+}
+
+#two-player.active {
+    background-color: #673ab7; /* Android orange for active "Two Player" */
+    color: #fff;
+    box-shadow: 0 0 8px rgba(255, 152, 0, 0.3);
+}
+
+.current-player-display {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #0a0202;
+}
+
+#current-player-icon {
+    font-weight: bold;
+    color: #3f51b5; /* Android blue for player X */
+}
+
+#current-player-icon.O {
+    color: #100c05; /* Android orange for player O */
+}
+
+/* Game Board */
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 80px); /* 3 columns, each 80px wide */
+    grid-template-rows: repeat(3, 80px); /* 3 rows, each 80px high */
+    gap: 8px; /* Space between cells */
+    margin: 0 auto 20px auto; /* Center the board horizontally */
+    width: fit-content; /* Adjust width to content */
+}
+
+.cell {
+    width: 80px;
+    height: 80px;
+    background-color: #4682A9; /* White background for each cell */
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s; /* Smooth transitions for interaction */
+    color: #333; /* Default text color for cells (will be overridden by X/O classes) */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); /* Minimal shadow for cells */
+}
+
+.cell:hover {
+    background-color: #749BC2; /* Slightly lighter on hover */
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.cell.X {
+    color: #a92929; /* Android blue for X */
+}
+
+.cell.O {
+    color: #00ff44; /* Android orange for O */
+}
+
+.turn-display {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #777;
+}
+
+.reset-button {
+    background-color: #f44336; /* Android red for reset button */
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.reset-button:hover {
+    background-color: #e53935; /* Darker red on hover */
+    transform: translateY(-1px); /* Slight lift effect */
+}
+
+/* Game Stats Section */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for stats */
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.stat-item {
+    background-color: #e0e0e0; /* Light grey background for each stat item */
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 0.95em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #555;
+}
+
+.stat-item p {
+    margin: 0 0 3px 0; /* Adjust margin for text */
+}
+
+.stat-item span {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #3f51b5; /* Android blue for stat numbers */
+}
+
+/* AI Difficulty Options */
+.ai-difficulty-options {
+    display: flex;
+    flex-direction: column; /* Stack difficulty buttons vertically */
+    gap: 10px;
+}
+
+.difficulty-button {
+    background-color: #e0e0e0; /* Light grey for inactive difficulty buttons */
+    color: #555;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align text to the left */
+}
+
+.difficulty-button:hover {
+    background-color: #d4d4d4;
+}
+
+.difficulty-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%; /* Circle shape */
+    margin-right: 8px;
+    background-color: #9e9e9e; /* Neutral grey for inactive dots */
+    border: 2px solid transparent; /* Placeholder for active border */
+    transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.difficulty-dot.easy {
+    background-color: #4caf50; /* Android green */
+}
+
+.difficulty-dot.medium {
+    background-color: #ffc107; /* Android yellow */
+}
+
+.difficulty-dot.hard {
+    background-color: #f44336; /* Android red */
+}
+
+.difficulty-button.active {
+    background-color: #4682A9; /* Light blue background when active */
+    color: #f5f7f8; /* Darker blue text */
+    box-shadow: 0 0 6px rgba(25, 118, 210, 0.3); /* Subtle blue glow for active */
+}
+
+/* Specific border colors for active difficulty dots */
+.difficulty-button.active .difficulty-dot.easy {
+    border-color: #4caf50;
+    box-shadow: 0 0 5px #4caf50;
+}
+.difficulty-button.active .difficulty-dot.medium {
+    border-color: #ffc107;
+    box-shadow: 0 0 5px #ffc107;
+}
+.difficulty-button.active .difficulty-dot.hard {
+    border-color: #f44336;
+    box-shadow: 0 0 5px #f44336;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    .game-area {
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center;
+    }
+
+    .game-mode-section,
+    .game-stats-section {
+        width: 100%;
+        max-width: 400px; /* Limit width on smaller screens for better readability */
+    }
+
+    .game-board {
+        grid-template-columns: repeat(3, 70px);
+        grid-template-rows: repeat(3, 70px);
+        gap: 6px;
+        margin-bottom: 15px;
+    }
+
+    .cell {
+        width: 70px;
+        height: 70px;
+        font-size: 2.5em;
+    }
+
+    .game-mode-options {
+        flex-direction: column; /* Stack mode buttons vertically */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .subtitle {
+        font-size: 0.9em;
+    }
+
+    .game-board {
+        grid-template-columns: repeat(3, 60px);
+        grid-template-rows: repeat(3, 60px);
+        gap: 5px;
+    }
+
+    .cell {
+        width: 60px;
+        height: 60px;
+        font-size: 2em;
+    }
+
+    .mode-button,
+    .reset-button,
+    .difficulty-button {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+}

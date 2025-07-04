@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">
+                <i class="fas fa-cloud-sun"></i>
+                Weather App
+            </h1>
+        </header>
+
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" id="cityInput" placeholder="Enter city name..." class="search-input">
+                <button id="searchBtn" class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <button id="locationBtn" class="location-btn">
+                <i class="fas fa-map-marker-alt"></i>
+                Use My Location
+            </button>
+        </div>
+
+        <div class="weather-container">
+            <!-- Loading State -->
+            <div id="loadingState" class="loading-state hidden">
+                <div class="spinner"></div>
+                <p>Fetching weather data...</p>
+            </div>
+
+            <!-- Error State -->
+            <div id="errorState" class="error-state hidden">
+                <div class="error-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <h3>Something went wrong</h3>
+                <p id="errorMessage">Unable to fetch weather data. Please try again.</p>
+                <button id="retryBtn" class="retry-btn">Try Again</button>
+            </div>
+
+            <!-- Weather Display -->
+            <div id="weatherDisplay" class="weather-display hidden">
+                <div class="current-weather">
+                    <div class="location-info">
+                        <h2 id="cityName" class="city-name"></h2>
+                        <p id="countryName" class="country-name"></p>
+                        <p id="currentDate" class="current-date"></p>
+                    </div>
+                    
+                    <div class="weather-main">
+                        <div class="weather-icon-container">
+                            <img id="weatherIcon" class="weather-icon" alt="Weather icon">
+                        </div>
+                        <div class="temperature-container">
+                            <span id="temperature" class="temperature"></span>
+                            <div class="temp-unit-toggle">
+                                <button id="celsiusBtn" class="temp-unit active">°C</button>
+                                <button id="fahrenheitBtn" class="temp-unit">°F</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="weather-description">
+                        <p id="weatherDesc" class="weather-desc"></p>
+                        <p id="feelsLike" class="feels-like"></p>
+                    </div>
+                </div>
+
+                <div class="weather-details">
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="detail-info">
+                            <span class="detail-label">Visibility</span>
+                            <span id="visibility" class="detail-value"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <div class="detail-info">
+                            <span class="detail-label">Humidity</span>
+                            <span id="humidity" class="detail-value"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-wind"></i>
+                        </div>
+                        <div class="detail-info">
+                            <span class="detail-label">Wind Speed</span>
+                            <span id="windSpeed" class="detail-value"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-thermometer-half"></i>
+                        </div>
+                        <div class="detail-info">
+                            <span class="detail-label">Pressure</span>
+                            <span id="pressure" class="detail-value"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <div class="detail-info">
+                            <span class="detail-label">UV Index</span>
+                            <span id="uvIndex" class="detail-value"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-compass"></i>
+                        </div>
+                        <div class="detail-info">
+                            <span class="detail-label">Wind Direction</span>
+                            <span id="windDirection" class="detail-value"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // API key from environment
+        window.OPENWEATHER_API_KEY = '12a824adae1effb228296699e821d748';
+    </script>
+    <script src="./script.js"></script>
+</body>
+</html>

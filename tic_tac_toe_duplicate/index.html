@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Challenge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tic-Tac-Toe Challenge</h1>
+        <p class="subtitle"></p>
+
+        <div class="game-area">
+            <div class="game-mode-section">
+                <h2>Game Mode</h2>
+                <div class="game-mode-options">
+                    <button class="mode-button active" id="vs-ai">VS AI</button>
+                    <button class="mode-button" id="two-player">Two Player</button>
+                </div>
+                <p class="current-player-display">Current Player: <span id="current-player-icon">X</span></p>
+
+                <div class="game-board">
+                    <div class="cell" data-cell-index="0"></div>
+                    <div class="cell" data-cell-index="1"></div>
+                    <div class="cell" data-cell-index="2"></div>
+                    <div class="cell" data-cell-index="3"></div>
+                    <div class="cell" data-cell-index="4"></div>
+                    <div class="cell" data-cell-index="5"></div>
+                    <div class="cell" data-cell-index="6"></div>
+                    <div class="cell" data-cell-index="7"></div>
+                    <div class="cell" data-cell-index="8"></div>
+                </div>
+                <p class="turn-display" id="turn-info">Player X's turn</p>
+                <button class="reset-button" id="reset-game">Reset Game</button>
+            </div>
+
+            <div class="game-stats-section">
+                <h2>Game Stats</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <p>X Wins</p>
+                        <span id="x-wins">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <p>O Wins</p>
+                        <span id="o-wins">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <p>Draws</p>
+                        <span id="draws">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <p>Total Games</p>
+                        <span id="total-games">0</span>
+                    </div>
+                </div>
+
+                <h2>AI Difficulty</h2>
+                <div class="ai-difficulty-options">
+                    <button class="difficulty-button active" id="easy-difficulty">
+                        <span class="difficulty-dot easy"></span> Easy
+                    </button>
+                    <button class="difficulty-button" id="medium-difficulty">
+                        <span class="difficulty-dot medium"></span> Medium
+                    </button>
+                    <button class="difficulty-button" id="hard-difficulty">
+                        <span class="difficulty-dot hard"></span> Hard
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

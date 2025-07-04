@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Portfolio</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Hello, I'm <span class="highlight"> sammi azaz</span></h1>
+                    <h2>B.Tech Student & Aspiring Software Developer</h2>
+                    <p>Passionate about technology and innovation, currently pursuing B.Tech in Computer Science Engineering. Skilled in multiple programming languages and always eager to learn new technologies.</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="./assets/image.png" alt="Profile Photo" class="profile-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am a dedicated B.Tech Computer Science Engineering student in my 3rd year, passionate about software development and emerging technologies. My academic journey has equipped me with strong problem-solving skills and a deep understanding of computer science fundamentals.</p>
+                    <p>Throughout my studies, I have gained hands-on experience in various programming languages and technologies. I enjoy working on challenging projects that push me to learn and grow as a developer. My goal is to contribute to innovative solutions that make a positive impact on society.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>3+</h3>
+                            <p>Years of Study</p>
+                        </div>
+                        <div class="stat">
+                            <h3>10+</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat">
+                            <h3>5+</h3>
+                            <p>Certifications</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Java</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">C++</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Web Technologies</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">HTML/CSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">React</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="65"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Node.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="60"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">MongoDB</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="55"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Frameworks</h3>
+                    <div class="tech-icons">
+                        <div class="tech-icon">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="fas fa-database"></i>
+                            <span>SQL</span>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="fab fa-linux"></i>
+                            <span>Linux</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="projects-nav">
+                <h2 class="section-title">My Projects</h2>
+            </div>
+            <div class="projects-container">
+                <div class="projects-grid" id="projects-grid">
+                <!-- <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="project-title">
+                            <h3>E-Commerce Website</h3>
+                            <span class="project-type">Full-stack e-commerce platform built with HTML, CSS, JavaScript, and PHP</span>
+                        </div>
+                    </div>
+                    <p class="project-description">A responsive e-commerce website with shopping cart functionality, product catalog, and user authentication. Features include user authentication, product catalog, shopping cart, and payment integration.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag html">HTML/CSS</span>
+                        <span class="tech-tag javascript">JavaScript</span>
+                        <span class="tech-tag php">PHP</span>
+                        <span class="tech-tag mysql">MySQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link github">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" class="project-link demo">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                    </div>
+                </div> -->
+
+                 <div class="project-card">  <!--tic tac toe  -->
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-th"></i>
+                        </div>
+                        <div class="project-title">
+                            <h3>Tic Tac Toe</h3>
+                            <span class="project-type">Classic Tic Tac Toe Game - Playable in Browser</span>
+                        </div>
+                    </div>
+                    <p class="project-description">A fun and interactive Tic Tac Toe game built with HTML, CSS, and JavaScript. Features include a responsive design, player vs player mode, win/draw detection, and a reset button. Great for practicing logic and UI development.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag html">HTML</span>
+                        <span class="tech-tag css">CSS</span>
+                        <span class="tech-tag javascript">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="../tic_tac_toe/index.html" class="project-link github" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="./tic_tac_toe_duplicate/index.html" class="project-link demo" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+
+                    <div class="project-card">  <!-- stopwatc -->
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-stopwatch"></i>
+                        </div>
+                        <div class="project-title">
+                            <h3>Stopwatch</h3>
+                            <span class="project-type">Simple & Responsive Stopwatch Web App</span>
+                        </div>
+                    </div>
+                    <p class="project-description">A clean and easy-to-use stopwatch application built with HTML, CSS, and JavaScript. Features start, stop, reset, and lap functionality, with a responsive design for all devices. Perfect for timing activities or productivity sessions.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag html">HTML</span>
+                        <span class="tech-tag css">CSS</span>
+                        <span class="tech-tag javascript">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="../stopwatch/index.html" class="project-link github" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="./stopwatch/index.html" class="project-link demo" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card hidden-project">  <!-- wheather app -->
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-cloud-sun"></i>
+                        </div>
+                        <div class="project-title">
+                            <h3>Weather App</h3>
+                            <span class="project-type">A weather application that fetches real-time weather data from external APIs</span>
+                        </div>
+                    </div>
+                    <p class="project-description">A weather application that fetches real-time weather data from external APIs. Features location-based weather, forecasts, and responsive design.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag javascript">JavaScript</span>
+                        <span class="tech-tag api">API</span>
+                        <span class="tech-tag css">CSS</span>
+                        <span class="tech-tag html">HTML</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link github">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="./wheather_app/index.html" class="project-link demo">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="project-title">
+                            <h3>Tic-</h3>
+                            <span class="project-type">A responsive task management application with features like task creation, categorization, deadline tracking, and progress monitoring</span>
+                        </div>
+                    </div>
+                    <p class="project-description">A full-stack task management application with real-time updates, drag-and-drop functionality, and team collaboration features. Built with modern web technologies.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag react">React.js</span>
+                        <span class="tech-tag nodejs">Node.js</span>
+                        <span class="tech-tag mongodb">MongoDB</span>
+                        <span class="tech-tag javascript">Express.js</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link github">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" class="project-link demo">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="project-title">
+                            <h3>Data Analysis Dashboard</h3>
+                            <span class="project-type">An interactive dashboard for data visualization and analysis using Python libraries</span>
+                        </div>
+                    </div>
+                    <p class="project-description">An interactive dashboard for data visualization and analysis using Python libraries. Features include data import, statistical analysis, and dynamic chart generation.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag python">Python</span>
+                        <span class="tech-tag django">Pandas</span>
+                        <span class="tech-tag api">Matplotlib</span>
+                        <span class="tech-tag mysql">Streamlit</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link github">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" class="project-link demo">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Additional hidden projects -->
+                <div class="project-card hidden-project">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="project-title">
+                            <h3>Student Management System</h3>
+                            <span class="project-type">A comprehensive web application for managing student records, grades, and attendance</span>
+                        </div>
+                    </div>
+                    <p class="project-description">A comprehensive web application for managing student records, grades, and attendance. Features include user authentication, CRUD operations, and reporting functionality.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag python">Python</span>
+                        <span class="tech-tag django">Django</span>
+                        <span class="tech-tag sqlite">SQLite</span>
+                        <span class="tech-tag html">HTML/CSS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link github">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" class="project-link demo">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+                
+                
+                <div class="project-card hidden-project">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="project-title">
+                            <h3>Mobile Banking App UI</h3>
+                            <span class="project-type">Modern mobile banking app interface design with smooth animations</span>
+                        </div>
+                    </div>
+                    <p class="project-description">A modern mobile banking app interface design with smooth animations and user-friendly navigation. Features include account management, transaction history, and money transfer.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag react">React Native</span>
+                        <span class="tech-tag javascript">JavaScript</span>
+                        <span class="tech-tag api">REST API</span>
+                        <span class="tech-tag css">Styled Components</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link github">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" class="project-link demo">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+                
+            
+                
+            </div>
+            
+            <div class="projects-toggle">
+                <button class="btn btn-primary" id="show-more-projects">
+                    <i class="fas fa-plus"></i>
+                    Show More Projects
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <div class="certifications-nav">
+                <h2 class="section-title">Certifications</h2>
+                <div class="projects-controls">
+                    <button class="scroll-btn" id="certifications-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="scroll-btn" id="certifications-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="certifications-container">
+                <div class="certifications-grid" id="certifications-grid">
+                <div class="certification-card">
+                    <div class="cert-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3>Python Programming</h3>
+                    <p>Certified Python Developer</p>
+                    <span class="cert-provider">Python Institute</span>
+                </div>
+                <div class="certification-card">
+                    <div class="cert-icon">
+                        <i class="fab fa-aws"></i>
+                    </div>
+                    <h3>AWS Cloud Practitioner</h3>
+                    <p>Cloud Computing Fundamentals</p>
+                    <span class="cert-provider">Amazon Web Services</span>
+                </div>
+                <div class="certification-card">
+                    <div class="cert-icon">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <h3>JavaScript Algorithms</h3>
+                    <p>Data Structures & Algorithms</p>
+                    <span class="cert-provider">FreeCodeCamp</span>
+                </div>
+                <div class="certification-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Database Management</h3>
+                    <p>SQL & Database Design</p>
+                    <span class="cert-provider">Oracle</span>
+                </div>
+                <div class="certification-card">
+                    <div class="cert-icon">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <h3>React Development</h3>
+                    <p>Frontend Development</p>
+                    <span class="cert-provider">Meta</span>
+                </div>
+                <div class="certification-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Cybersecurity Basics</h3>
+                    <p>Network Security Fundamentals</p>
+                    <span class="cert-provider">Cisco</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>I'm always open to discussing new opportunities, collaborations, or just having a conversation about technology. Feel free to reach out!</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <span>sammiazaz2004@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <span>+91 81028 42575</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <span>New Delhi, Delhi, India</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/sammiazaz" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="linkedin.com/in/sammi-azaz-b07a7028b" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            <i class="fas fa-envelope form-icon"></i>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-send">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Sammi azaz. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
